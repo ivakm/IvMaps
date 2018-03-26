@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map{
+        height: 400px;
+        width: 100%;
+       }
+	   h3{
+	   text-align: center;
+	   display: block;
+	   text-transform: uppercase;
+	   }
+    </style>
+  </head>
+  <body>
+    <h3>карта для мур</h3>
+    <div id="map"></div>
+	<div id="map2"></div>
+	<div id="map3"></div>
+	<div id="map4"></div>
+    <script>
+      function initMap() {
+        var sibirtseva = {lat: 48.5910597, lng: 37.9993998};
+		var horkoho = {lat: 48.5946738, lng: 38.0214159};
+		var chayk = {lat: 48.59035761, lng: 37.97340021};
+		var glyn = {lat: 48.632477, lng: 37.9966497};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11.5,
+          center: sibirtseva,
+		  
+        });
+        var marker = new google.maps.Marker({
+          position: sibirtseva,
+          map: map,
+		  title: "вул. Сибірцева, 15 - амбулаторія №1"
+        });
+		
+		 var markerhorkogo = new google.maps.Marker({
+          position: horkoho,
+          map: map,
+		  title: "вул. Горького, 47 - амбулаторія №6"
+        });
+		
+		var markerChayk = new google.maps.Marker({
+		 position: chayk,
+          map: map,
+		  title: "вул. Чайковського,28 - амбулаторія №7"
+		})
+		
+		var markerGlyn = new google.maps.Marker({
+		 position: glyn,
+          map: map,
+		  title: "вул. Глинки, 1 - амбулаторія №9"
+		})
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxh2Y9GfsAH92phiz_-0m58cP-njEqcsk&callback=initMap">
+    </script>
+  </body>
+</html>
+
