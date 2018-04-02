@@ -20,11 +20,14 @@
     <script>
       function initMap() {
         var sibirtseva = {lat: 48.5910597, lng: 37.9993998};
+		var peremohy = {lat: 48.5998455, lng: 37.9684754};
+		var Siv = {lat: 48.8665628, lng: 38.1127668};
 		var horkoho = {lat: 48.5946738, lng: 38.0214159};
 		var chayk = {lat: 48.59035761, lng: 37.97340021};
+		var subirtseva ={lat: 48.59065875, lng: 37.99952855};
 		var glyn = {lat: 48.632477, lng: 37.9966497};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
+          zoom: 11.5,
           center: sibirtseva,
 		  
         });
@@ -32,6 +35,18 @@
           position: sibirtseva,
           map: map,
 		  title: "вул. Сибірцева, 15 - амбулаторія №1"
+        });
+		
+		  var marker = new google.maps.Marker({
+          position: sibirtseva,
+          map: map,
+		  title: "вул. Перемоги, 53 - амбулаторія №2"
+        });
+
+		  var marker = new google.maps.Marker({
+          position: sibirtseva,
+          map: map,
+		  title: "Вул. Ювілейна, 54 Сіверськ - амбулаторія №3"
         });
 		
 		 var markerhorkogo = new google.maps.Marker({
@@ -45,6 +60,12 @@
           map: map,
 		  title: "вул. Чайковського,28 - амбулаторія №7"
 		})
+		
+			var marker = new google.maps.Marker({
+          position: subirtseva,
+          map: map,
+		  title: "вул. Сибірцева, 15 - амбулаторія №8"
+        });
 		
 		var markerGlyn = new google.maps.Marker({
 		 position: glyn,
